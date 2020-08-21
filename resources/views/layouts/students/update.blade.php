@@ -1,7 +1,13 @@
 @extends('layouts.master')
-@section('title','Thêm mới học sinh')
+@section('title','Chỉnh sửa thông tin học sinh')
 @section('content')
 
+    <div class="content">
+        <div class="row">
+            <div class="col-12">
+                <h4>Chỉnh sửa thông tin học sinh</h4>
+            </div>
+            <div class="col-12">
     <form action="{{route('students.store')}}" method="post" class="mt-4" enctype="multipart/form-data">
         @csrf
         <div class="form-group">

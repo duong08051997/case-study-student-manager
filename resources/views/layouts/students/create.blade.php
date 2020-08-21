@@ -2,10 +2,17 @@
 @section('title','Thêm mới học sinh')
 @section('content')
 
-    <form action="{{route('students.store')}}" method="post" class="mt-4" enctype="multipart/form-data">
+    <div class="content">
+        <div class="row">
+            <div class="col-12">
+                <h4>Thêm mới học sinh</h4>
+            </div>
+            <div class="col-12">
+    <form action="{{route('students.store')}}" method="post" class="" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
-            <label >Ảnh hoc sinh: </label>
+            <label >Ảnh hoc sinh: </label><br>
+            <i class='fa fa-camera-retro' style='font-size:32px'></i>
             <input type="file" class="form-control" name="image" required>
         </div>
         <div class="form-group">
@@ -34,6 +41,10 @@
                 @endforeach
             </select>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Thêm mới</button>
+        <button class="btn btn-secondary" onclick="window.history.go(-1); return false;">Hủy</button>
     </form>
+            </div>
+        </div>
+    </div>
 @endsection
