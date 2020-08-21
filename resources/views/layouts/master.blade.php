@@ -40,17 +40,18 @@
         </div>
         <div class="sidebar-wrapper">
             <ul class="nav">
-                <li class="active ">
+                <li >
                     <a href="">
                         <i class="nc-icon nc-bank"></i>
                         <p>Trang chủ</p>
                     </a>
-                <li class="active ">
+                <li >
                     <a href="{{route('classes.index')}}">
                         <i class="nc-icon nc-tile-56"></i>
                         <p>Danh sách lớp học</p>
                     </a>
-                <li class="active ">
+{{--                    class="active "--}}
+                <li >
                     <a href="{{route('students.index')}}">
                         <i class="nc-icon nc-single-02"></i>
                         <p>Danh sách học sinh</p>
