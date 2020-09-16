@@ -32,6 +32,17 @@ class StudentController extends Controller
         $this->studentService->addStudent($request);
         Session::flash('success','Thêm mới học sinh thành công');
         return redirect()->route('students.index');
-
+    }
+    public function edit($id)
+    {
+        $students = $this->studentService->findId($id);
+        $classes = $this->classService->getAll();
+        return view('layouts.students.edit',compact('students','classes'));
+    }
+    public function update(Request $request,$id)
+    {
+        $this->studentService->updateStudent($request,$id);
+        Session::flash('success','Chỉnh sửa thông tin học sinh thanh công');
+        return redirect()->route('students.index');
     }
 }

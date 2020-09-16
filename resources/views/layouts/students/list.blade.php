@@ -37,9 +37,10 @@
                 <td>{{$student->dob}}</td>
                 <td>{{$student->gender}}</td>
                 <td>{{$student->email}}</td>
-                <td>{{$classes[1]['name']}}</td>
+                {{dd($student->classRoom)}}
+                <td>{{$student->class->name}}</td>
                 <td>
-                    <a href="#">
+                    <a href="{{route('students.edit',$student->id)}}">
                         <i class="fa fa-edit" style="font-size:24px"></i></a>
                 </td>
                 <td>

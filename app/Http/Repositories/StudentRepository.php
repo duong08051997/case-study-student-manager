@@ -21,6 +21,9 @@ class StudentRepository
     public function save($student)
     {
         $student->save();
-
+    }
+    public function findId($id)
+    {
+        return $this->student->findOrFail($id);
     }
 }
